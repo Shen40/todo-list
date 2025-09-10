@@ -1,4 +1,21 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
+
+const StyledForm = styled.form`
+    padding: 0.5rem;
+`;
+
+const StyledButton  = styled.button`
+    margin:0.5rem;
+`
+const StyledLabel = styled.label`
+  padding: 0.5rem;
+`;
+
+const StyledInput = styled.input`
+  margin:0.5rem;
+
+`;
 
 function TodosViewForm({sortDirection, setSortDirection, sortField, setSortField, queryString, setQueryString}){
     const [localQueryString, setLocalQueryString] = useState(queryString);
@@ -15,18 +32,18 @@ function TodosViewForm({sortDirection, setSortDirection, sortField, setSortField
     const preventRefresh= (event) => {
         event.preventDefault(); 
     }
-    return <form action="" onSubmit={preventRefresh}>
+    return <StyledForm action="" onSubmit={preventRefresh}>
         <div>
-            <label htmlFor="">Seach Todos</label>
-            <input 
+            <StyledLabel htmlFor="">Seach Todos</StyledLabel>
+            <StyledInput 
             type="text" 
             value={localQueryString}
             onChange={(event)=>setLocalQueryString(event.target.value)}
             />
-            <button type="button" onClick={()=>setLocalQueryString("")}>Clear</button>
+            <StyledButton type="button" onClick={()=>setLocalQueryString("")}>Clear</StyledButton>
         </div>
         <div>
-            <label htmlFor="sortBy">Sort by</label>
+            <StyledLabel htmlFor="sortBy">Sort by</StyledLabel>
             <select 
             name="sortBy" 
             id="sortBy" 
@@ -36,7 +53,7 @@ function TodosViewForm({sortDirection, setSortDirection, sortField, setSortField
                 <option value="createdTime">Time added</option>
             </select>
 
-            <label htmlFor="direction">Direction</label>
+            <StyledLabel htmlFor="direction">Direction</StyledLabel>
             <select name="direction" id="direction"
              onChange={(event)=>setSortDirection(event.target.value)}
              value={sortDirection}>
@@ -44,7 +61,7 @@ function TodosViewForm({sortDirection, setSortDirection, sortField, setSortField
                 <option value="desc">Descending</option>
             </select>
         </div>
-    </form>
+    </StyledForm>
 }
 
 export default TodosViewForm;

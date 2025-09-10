@@ -1,0 +1,27 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+    
+}
+
+label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+}
+
+select{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+}
+
+body{
+    background-color: antiquewhite;
+}

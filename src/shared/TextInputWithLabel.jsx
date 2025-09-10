@@ -1,3 +1,12 @@
+import styled from "styled-components";
+
+const StyledInput = styled.input`
+  margin:0.5rem;
+`
+const StyledLabel = styled.label`
+  padding: 0.5rem;
+`;
+
 function TextInputWithLabel({
   elementId,
   label,
@@ -6,8 +15,8 @@ function TextInputWithLabel({
   value,
 }){
     return <>
-    <label htmlFor={elementId}>{label}</label>
-    <input 
+    <StyledLabel htmlFor={elementId}>{label}</StyledLabel>
+    <StyledInput 
     type="text" 
     id={elementId}
     ref={ref}
