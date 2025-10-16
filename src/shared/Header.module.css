@@ -1,0 +1,23 @@
+.header{
+    position: relative;
+}
+.active{
+    color:gray; 
+    text-decoration: none;
+}
+.inactive{
+    color:black; 
+    text-decoration: none;
+}
+.title{
+    align-items: center;
+}
+.nav{
+    position:absolute;
+    top: 1rem; 
+    right: 1rem;
+    display:flex;
+
+    gap: 1rem;
+}
+
